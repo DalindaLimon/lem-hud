@@ -1,0 +1,91 @@
+html{
+    overflow: hidden;
+    
+}
+button{
+    position: relative;
+    top: 3vh;
+    margin: auto auto auto auto;
+    left: 0vh;
+}
+.settings-block{
+    text-align: center;
+    border-radius: 8%;
+    margin: 1vh;
+    width: 20vh;
+    height: 10vh;
+    background-color: aliceblue;
+}
+.hud-menu{
+    visibility: hidden;
+    margin: 10%;
+    position: absolute;
+    border-radius: 10px;
+    border: 5px solid gray;
+    width: 50vh;
+    height: 50vh;
+    background-color: gray;
+    display: inline-flex;
+}
+.menu-sec{
+    position: relative;
+}
+
+.yanyan{
+    position: absolute;
+    top: 95vh;
+    display: inline-flex;
+ }
+ .kutu{
+    margin-left: 0.5vh;
+    width: 10vh;
+    height: 23px;
+    border: solid 2px;
+    border-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    background-color: gray;
+ }
+ 
+ .kalp-yuzde{
+     border-radius: 10px;
+     background-color: rgb(0, 255,0);
+     width: 90%;
+     height: 100%;
+ }
+
+
+ .Zirh-yuzde{
+     border-radius: 10px;
+     background-color: rgb(255, 255, 255);
+     width: 50%;
+     height: 100%;
+ }
+ .hunger-percent{
+    border-radius: 10px;
+    background-color: rgb(255, 127, 0);
+    width: 50% ;
+    height: 100%;
+
+ }
+ .thirst-percent{
+    border-radius: 10px;
+    background-color: rgb(0, 127, 255);
+    width: 50% ;
+    height: 100%;
+ }
+ .stamina-percent{
+    border-radius: 10px;
+    background-color: rgb(0, 255,255);
+    width: 50% ;
+    height: 100%;
+ }
+ .oxygen-percent{
+    border-radius: 10px;
+    background-color: rgb(255,0,0);
+    width: 50%;
+    height: 100%;
+ }
+
+ .yanyan span{
+     margin-left: 5px;
+ }
