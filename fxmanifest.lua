@@ -8,7 +8,6 @@ client_scripts{
 }
  
 server_scritpts{
-  'server/server.lua'
 }
 
 ui_page 'web/main.html'
