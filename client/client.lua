@@ -60,30 +60,3 @@ CreateThread(function()
     
 end)
 
-RegisterCommand('sh', function (src,args)
-    local ped= PlayerPedId()
-    local args = tonumber(args[1])
-    local mhealth =  GetEntityMaxHealth(ped)
-    local health = GetEntityHealth(ped)
-    if mhealth > 100 then
-        args = args+100
-        SetEntityHealth(ped,args)
-    else
-        SetEntityHealth(ped,args)
-    end
-    print(args)
-    
-    
-end,false)
-
-RegisterCommand('ah', function (src,args)
-    local ped= PlayerPedId()
-    local args = tonumber(args[1])
-    local health = GetPedArmour(ped)
-        SetPedArmour(ped,args)
-        
-
-    print(args)
-    
-    
-end,false)
