@@ -1,5 +1,6 @@
 html{
     overflow: hidden;
+    z-index: 1;
     
 }
 button{
@@ -88,4 +89,74 @@ button{
 
  .yanyan span{
      margin-left: 5px;
+ }
+ .gosterge{
+   display: flex;
+    margin: 88vh 20vh auto auto;
+    width: 10px;
+    height: 10px;
+   
+ }
+
+ .kmh{
+    width: 20vh;
+    height: 10vh;
+    border-style: solid;
+    border-color: wheat;
+    border-width: 5px 5px 0px 5px;
+    border-radius:10vh 10vh 0vh 0vh;
+    
+ }
+ .seatbelt{
+   position: absolute;
+   color: white;
+   margin: 3% auto auto 3% ;
+   
+   
+
+}
+.rpmeter{
+   position: absolute;
+   display: flex;
+   margin: 3% auto auto 6%;
+   width: 3vh;
+   height: 2vh;
+   border-style: solid;
+   border-color: white;
+   border-width: 3px 3px 0px 3px;
+   border-radius:10vh 10vh 0vh 0vh;
+   
+       
+       
+   
+
+}
+#rpm{
+   color: white;
+
+}
+ .speedemeter{
+   position: absolute;
+   margin: 4% auto auto 5%;
+    color: white;
+    font-weight: bolder;
+    font-size: xx-large;
+    z-index: 3;
+    text-shadow: 0px 0px 5px black;
+    text-align: center;
+   
+    
+    
+
+ }
+ .stick{
+    
+    width: 45%;
+    height: 10%;
+    box-shadow:black;
+    background: wheat;  
+    border-radius: 0%;
+    margin: 50% 50% auto auto;
+    transform-origin:100% 0%;
+   rotate: 180deg; 
  }

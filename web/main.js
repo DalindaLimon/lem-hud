@@ -8,7 +8,15 @@ window.addEventListener('message', function(event){
     stamina(data)
     hunger(data)
     thirst(data)
+    speedemeter(data)
+    IsinVehicle(data)
+    /* oxygen(data) */
+    seatbelt(data)
+    vehiclerpm(data)
+    
 });
+
+
 function buttonsize(buttonid,todo){
     buttonid = String(buttonid)
     const element = document.getElementById(buttonid)
@@ -21,7 +29,19 @@ function buttonsize(buttonid,todo){
 
 }
 
-
+function IsinVehicle(data) {
+    const gosterge = document.getElementById("gosterge")
+   
+    if(data.IsinVehicle){
+        gosterge.style.display = "block";
+        
+    }
+    else{
+        gosterge.style.display = "none";
+        
+    }
+    
+}
 function armor(data){
     const armorbox = document.getElementById('zirh')
     const armor = document.getElementById('zirh-yuzde')
@@ -40,7 +60,8 @@ function stamina(data){
     const staminabox = document.getElementById('staminabox')
     const stamina = document.getElementById('stamina')
     const staminayuzde = String((data.stamina)+"%")
-    if (parseInt(staminayuzde) > 90){
+    
+    if (data.stamina > 95){
         staminabox.style.display = 'none'
         
     }
@@ -61,4 +82,44 @@ function thirst(data){
     const thirstpercent = String((data.thirst)+"%");
     thirst.style.width = thirstpercent;
 
+}
+/* function oxygen(data){
+    const oxygenbox = document.getElementById('oxygenbox')
+    const oxygen = document.getElementById('oxygen')
+    const oxygenyuzde = String((data.oxygen)+"%")
+    
+    
+    if (data.oxygen > 95){
+        oxygenbox.style.display = 'none'
+        
+    }
+    else{
+        oxygenbox.style.display = 'block'
+        oxygen.style.width = oxygenyuzde
+    }
+} */
+
+function speedemeter(data,){
+    const spid = document.getElementById('speedemeter');
+    const stick = document.getElementById('stick')
+    const vehiclespeed = Math.floor(data.vehiclespeed);
+    spid.innerHTML = vehiclespeed ;
+   /*  stick.style.rotate = String((data.vehiclerpm*120+"deg")) */
+
+}
+function vehiclerpm(data){
+    const stick = document.getElementById("rpm-stick");
+    const rotate = String(data.vehiclerpm*139+"deg")
+    stick.style.rotate = rotate
+}
+function seatbelt(data){
+    const seatbelt = document.getElementById('seatbelt-ic')
+    if(data.seatbelt){
+        seatbelt.innerHTML = 'add_link'
+        seatbelt.style.color = "white"
+    }
+    else{
+        seatbelt.innerHTML = 'link_off'
+        seatbelt.style.color = "red"
+    }
 }
